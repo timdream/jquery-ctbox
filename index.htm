@@ -1,0 +1,38 @@
+<!doctype html>
+<html class="no-js" lang="zh-tw">
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+
+	<title>jquery.ctbox.js</title>
+</head>
+<body>
+<h1>jQuery.ctbox</h1>
+<p>jQuery CT-BOX API Wrapper</p>
+<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.6.2/jquery.min.js"></script>
+<script src="jquery.ctbox.js"></script>
+<script type="text/javascript">
+
+if (console && console.log) {
+	console._log = console.log;
+}
+
+var console = console || {};
+
+// verbose console.log, for debugging purpose.
+console.log = function () {
+	alert(arguments[0]);
+	console._log.apply(this, arguments);
+};
+
+$(function () {
+	$('test').ctbox(
+		{
+			key: ''
+		}
+	);
+});
+</script>
+</body>
+</html>
+
